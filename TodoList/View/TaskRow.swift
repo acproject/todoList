@@ -9,12 +9,13 @@ import SwiftUI
 
 struct TaskRow: View {
     
-    @State var model:TodoModel
+    var model:TodoModel
     
     let action: () -> ()
     
     var body: some View {
         HStack {
+            //! 注意： 这里不能使用三元表达返回的内容不能是接口或者是协议的实现，只能是Struct， 类型或者对象 ，所以这里用if - else
             if model.isCompleted {
                 finishedTaskView(model)
             }
@@ -23,12 +24,13 @@ struct TaskRow: View {
             }
             Spacer()
             Button {
-                model.isCompleted.toggle()
+                action()
             }label: {
                 Image(systemName: model.isCompleted ? "checkmark.circle.fill" : "circle")
                     .foregroundStyle(.toDoAccent)
                    
             }
+            .buttonStyle(.borderless)
         }
         .font(.headline)
         .padding()

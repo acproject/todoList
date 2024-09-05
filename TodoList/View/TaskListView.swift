@@ -10,18 +10,30 @@ import SwiftUI
 struct TaskListView: View {
     
     @EnvironmentObject var viewModel:TaskViewModel
+    @State private var isEditViewPresented: Bool = false
     
     var body: some View {
         NavigationView {
             ZStack {
-                LinearGradient(colors: [Color.toBackground1, Color.toBackground2], startPoint: .topLeading, endPoint: .bottomTrailing)
-                    .ignoresSafeArea()
+                BackgroundView()
                 VStack {
                     List {
-                        ForEach(viewModel.tasks) { task in
+                        ForEach(viewModel.tasks) {task in
                             TaskRow(model: task) {
-                                
+                                viewModel.isCompletedTask(task: task)
                             }
+                            .onTapGesture {
+                                viewModel.selectedTask = task
+                                isEditViewPresented = true
+                            }
+                            
+                        }
+                        .onDelete(perform: viewModel.deleteTask)
+                        .sheet(isPresented: $isEditViewPresented) {
+                            if let tasktoEdit = viewModel.selectedTask {
+                                EditTaskView(task: tasktoEdit)
+                            }
+                            
                         }
                     }
                     .listStyle(.plain)

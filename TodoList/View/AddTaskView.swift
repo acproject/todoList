@@ -13,31 +13,12 @@ struct AddTaskView: View {
     @EnvironmentObject var viewModel:TaskViewModel
     var body: some View {
         ZStack {
-            LinearGradient(colors: [Color.toBackground1, Color.toBackground2], startPoint: .topLeading, endPoint: .bottomTrailing)
-                .ignoresSafeArea()
+            BackgroundView()
             VStack {
-                TextField("输入你的任务", text: $viewModel.newTask)
-                    .padding()                                      // 注意padding与background的位置，效果是不同的
-                    .background(Color.toDoPrimary.opacity(0.15))
-                    .cornerRadius(10)
-                    .offset(y: 20)
-                
-                
-                
-                Button {
-                    viewModel.addTask(task: viewModel.newTask)
-                    dissmissClean()
-                    
-                }label: {
-                    Text("添加任务")
-                        .font(.headline)
-                        .padding()
-                        .foregroundStyle(Color.toDoBackground1)
-                        .frame(maxWidth: .infinity)
-                        .background(Color.toAccent)
-                        .cornerRadius(10)
-                        .offset(y: 20)
-                }
+                    CustomTextField(placeholder: "输入你的任务")
+                    CustomButton(title: "添加任务") {
+                        viewModel.addTask(task: viewModel.newTask)
+                    }.disabled(viewModel.newTask.isEmpty && viewModel.newTask == "")
 
                 Spacer()
                 
@@ -63,11 +44,7 @@ struct AddTaskView: View {
         }
     }
     
-    private func dissmissClean() {
-        viewModel.newTask = ""
-        dismiss()
-    }
-    
+
 }
 
 #Preview {

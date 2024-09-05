@@ -17,6 +17,10 @@
 		041D6B9C2C80AD9F00F17AE9 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D6B9B2C80AD9F00F17AE9 /* AddTaskView.swift */; };
 		041D6BA52C87FF4D00F17AE9 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D6BA42C87FF4D00F17AE9 /* TaskViewModel.swift */; };
 		041D6BCA2C89427000F17AE9 /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D6BC92C89427000F17AE9 /* TaskRow.swift */; };
+		041D6BCD2C895A1700F17AE9 /* EditTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D6BCC2C895A1700F17AE9 /* EditTaskView.swift */; };
+		041D6BD02C89612200F17AE9 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D6BCF2C89612200F17AE9 /* CustomTextField.swift */; };
+		041D6BD22C89614300F17AE9 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D6BD12C89614300F17AE9 /* CustomButton.swift */; };
+		041D6BD42C896D8200F17AE9 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D6BD32C896D8200F17AE9 /* BackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,11 @@
 		041D6B9B2C80AD9F00F17AE9 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 		041D6BA42C87FF4D00F17AE9 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
 		041D6BC92C89427000F17AE9 /* TaskRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
+		041D6BCB2C89510E00F17AE9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		041D6BCC2C895A1700F17AE9 /* EditTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskView.swift; sourceTree = "<group>"; };
+		041D6BCF2C89612200F17AE9 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		041D6BD12C89614300F17AE9 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		041D6BD32C896D8200F17AE9 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +56,7 @@
 		041D6B772C80A63100F17AE9 = {
 			isa = PBXGroup;
 			children = (
+				041D6BCB2C89510E00F17AE9 /* README.md */,
 				041D6B822C80A63100F17AE9 /* TodoList */,
 				041D6B812C80A63100F17AE9 /* Products */,
 			);
@@ -63,6 +73,7 @@
 		041D6B822C80A63100F17AE9 /* TodoList */ = {
 			isa = PBXGroup;
 			children = (
+				041D6BCE2C8960F700F17AE9 /* Components */,
 				041D6B832C80A63100F17AE9 /* TodoListApp.swift */,
 				041D6B852C80A63100F17AE9 /* ContentView.swift */,
 				041D6B962C80A76A00F17AE9 /* Extensions */,
@@ -105,6 +116,7 @@
 				041D6B992C80AAD400F17AE9 /* TaskListView.swift */,
 				041D6B9B2C80AD9F00F17AE9 /* AddTaskView.swift */,
 				041D6BC92C89427000F17AE9 /* TaskRow.swift */,
+				041D6BCC2C895A1700F17AE9 /* EditTaskView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -115,6 +127,16 @@
 				041D6B972C80A78600F17AE9 /* Color+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		041D6BCE2C8960F700F17AE9 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				041D6BCF2C89612200F17AE9 /* CustomTextField.swift */,
+				041D6BD12C89614300F17AE9 /* CustomButton.swift */,
+				041D6BD32C896D8200F17AE9 /* BackgroundView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,11 +209,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				041D6BCD2C895A1700F17AE9 /* EditTaskView.swift in Sources */,
 				041D6B952C80A6DD00F17AE9 /* TodoModel.swift in Sources */,
 				041D6BA52C87FF4D00F17AE9 /* TaskViewModel.swift in Sources */,
 				041D6B862C80A63100F17AE9 /* ContentView.swift in Sources */,
+				041D6BD02C89612200F17AE9 /* CustomTextField.swift in Sources */,
 				041D6BCA2C89427000F17AE9 /* TaskRow.swift in Sources */,
+				041D6BD42C896D8200F17AE9 /* BackgroundView.swift in Sources */,
 				041D6B9A2C80AAD400F17AE9 /* TaskListView.swift in Sources */,
+				041D6BD22C89614300F17AE9 /* CustomButton.swift in Sources */,
 				041D6B9C2C80AD9F00F17AE9 /* AddTaskView.swift in Sources */,
 				041D6B842C80A63100F17AE9 /* TodoListApp.swift in Sources */,
 				041D6B982C80A78700F17AE9 /* Color+Extension.swift in Sources */,
